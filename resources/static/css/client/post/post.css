@@ -1,0 +1,93 @@
+main a {
+    font-size: 12px;
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.post-info span {
+    white-space: nowrap;
+}
+
+.post-report,
+.post-url,
+.post-list,
+.post-write,
+.post-edit,
+.post-delete{
+    background: none;
+    border: white;
+    font-size: 12px;
+}
+.info {
+    border-bottom: 1px solid antiquewhite;
+    width: 750px;
+    margin-bottom: -5px;
+}
+.title,
+.board {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 0 5px 0;
+}
+.post-writer {
+    font-weight: bold;
+}
+.post-writer,
+.post-date,
+.post-views,
+.post-comments {
+    font-size: 12px;
+    float: right;
+}
+.post-comments {
+    float: right;
+    font-size: 12px;
+}
+.post-content {
+    width : 750px;
+    min-height : 200px;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid antiquewhite;
+}
+.post-content img {
+    max-width: 90%; /* 이미지의 최대 너비를 컨테이너의 너비로 제한 */
+    height: auto; /* 이미지 비율 유지 */
+    display: block; /* 이미지를 블록 요소로 설정하여 여백 제거 */
+    margin: 0 auto; /* 이미지를 중앙에 정렬 */
+}
+.post-actions {
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬 */
+    margin-top: 20px; /* 위쪽에 간격 추가, 필요시 조정 */
+}
+
+.left-actions {
+    display: flex;
+}
+
+.right-actions {
+    display: flex;
+    margin-left: 535px;
+}
+
+.left-actions button,
+.right-actions button {
+    margin-right: 10px;
+}
+
+.left-actions button:last-child,
+.right-actions button:last-child {
+    margin-right: 0;
+}
+
+.left-actions button:hover,
+.right-actions button:hover {
+    font-weight: bold;
+}

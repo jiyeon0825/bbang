@@ -1,0 +1,95 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체적인 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 60px;
+}
+
+/* 헤더 스타일 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1260px;
+    max-width: 100%;
+    background-color: antiquewhite;
+    color: #333;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 로고 스타일 */
+.logo {
+    position: absolute;
+    left: 100px;
+}
+
+/* 네비게이션 스타일 */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

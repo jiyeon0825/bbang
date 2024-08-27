@@ -1,0 +1,15 @@
+.inquiry {
+    width: 80%;
+    /*border-top: 1px solid;*/
+    border-collapse: collapse;
+    font-size: 12px;
+}
+input[type=text] {
+    padding: 5px;
+}
+input[type=submit] {
+    border: none;
+    padding: 3px 5px 3px 5px;
+    background-color: antiquewhite;
+    border-radius: 4px;
+}

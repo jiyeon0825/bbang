@@ -1,0 +1,62 @@
+main a {
+    font-size: 12px;
+}
+button {
+    background: none;
+    border: white;
+    font-size: 12px;
+}
+.info {
+    border-bottom: 1px solid antiquewhite;
+    width: 750px;
+    margin-bottom: -5px;
+}
+.notice-info {
+    display: flex; /* 수평 정렬을 위한 플렉스 컨테이너 설정 */
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: flex-end;
+    gap: 10px; /* 요소 간의 간격 설정 */
+    margin-top: 10px;
+}
+
+.notice-info span {
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.title {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 0 5px 0;
+}
+.writer {
+    font-weight: bold;
+}
+.writer,
+.date,
+.views,
+.comments {
+    font-size: 12px;
+    float: right;
+}
+.notice-content {
+    width : 750px;
+    min-height : 200px;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid antiquewhite;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+select {
+    margin-bottom: 10px;
+}
+
+.notice-actions {
+    margin-left: 680px;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.notice-actions button:hover {
+    font-weight: bold;
+}
