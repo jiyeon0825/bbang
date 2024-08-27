@@ -12,22 +12,26 @@
     <div class="head">
         신고 목록
     </div>
-    <div class="list">
-        <table class="report">
-            <tr>
-                <th style="width: 50px">신고 번호</th>
-                <th style="width: 300px">신고 글 / 댓글</th>
-                <th style="width: 150px">신고 사유</th>
-                <th style="width: 100px">신고일</th>
-            </tr>
-            <tr th:each="report: ${reportList}">
-                <td th:text="${report.reportNo}"></td>
-                <td class="reported" th:text="${report.post != null ? '[게시글] ' + report.post.postTitle : (report.comment != null ? '[댓글] ' + report.comment.commentContent : '')}"></td>
-                <td th:text="${report.reportReason}"></td>
-                <td th:text="${#temporals.format(report.reportRegistered, 'yy.MM.dd HH:mm')}"></td>
-            </tr>
-        </table>
-    </div><br>
+<div class="list">
+    <table class="report">
+        <tr>
+            <th style="width: 50px">신고 번호</th>
+            <th style="width: 300px">신고 글 / 댓글</th>
+            <th style="width: 150px">신고 사유</th>
+            <th style="width: 100px">신고일</th>
+        </tr>
+        <tr th:each="report: ${reportList}">
+            <td th:text="${report.reportNo}"></td>
+            <td class="reported">
+                <a th:if="${report.post != null}" th:href="@{/post/{postNo}(postNo=${report.post.postNo})}" th:text="'[게시글] ' + ${report.post.postTitle}"></a>
+                <a th:if="${report.comment != null}"
+                   th:href="@{/post/{postNo}(postNo=${report.comment.post.postNo})}" th:text="'[댓글] ' + ${report.comment.commentContent}"></a>
+            </td>
+            <td th:text="${report.reportReason}"></td>
+            <td th:text="${#temporals.format(report.reportRegistered, 'yy.MM.dd HH:mm')}"></td>
+        </tr>
+    </table>
+</div><br>
     <div class="page">
         <!-- Left arrow for navigating to the previous set -->
         <span th:if="${startPage > 1}">
